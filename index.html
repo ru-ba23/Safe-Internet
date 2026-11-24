@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Safe Internet: a mission-based cybersecurity learning game.">
+  <title>Safe Internet — Cyber Guardian</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar"><a class="brand" href="#home"><span class="brand-mark">✦</span> CYBER<span>GUARDIAN</span></a><div class="top-meta"><span class="live-dot"></span> LEARNING SIMULATION <span class="top-level">LEVEL 01</span></div></header>
+    <main>
+      <section id="home-screen" class="screen home-screen">
+        <div class="hero-copy"><p class="eyebrow">A DIGITAL SAFETY ADVENTURE</p><h1>Become the<br><span>Cyber Guardian.</span></h1><p class="lead">Explore the digital world, spot online threats, and protect the network one mission at a time.</p>
+          <div class="hero-actions"><button id="start-btn" class="primary-btn">START ADVENTURE <span>↗</span></button><button id="how-btn" class="ghost-btn">HOW TO PLAY</button></div>
+          <div class="hero-stats"><div><strong>05</strong><small>MISSIONS</small></div><div><strong>13–16</strong><small>AGE GROUP</small></div><div><strong>100%</strong><small>INTERACTIVE</small></div></div>
+        </div>
+        <div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-avatar"><div class="avatar-hair"></div><div class="avatar-face"><i></i><b></b></div><div class="avatar-body"><span>✦</span></div><div class="avatar-leg leg-one"></div><div class="avatar-leg leg-two"></div></div><div class="float-card card-a">⌁ <span>THREAT DETECTED</span></div><div class="float-card card-b">✓ <span>FIREWALL ACTIVE</span></div><div class="hero-chip">PLAYER 01<br><b>GUARDIAN</b></div></div>
+      </section>
+      <section id="how-screen" class="screen info-screen hidden"><button class="back-btn" data-back>← BACK</button><p class="eyebrow">QUICK GUIDE</p><h2>How to play</h2><div class="guide-grid"><article><b>01 / MOVE</b><p>Use A and D or the arrow keys to move. Press SPACE or W to jump.</p></article><article><b>02 / INTERACT</b><p>Walk close to a glowing cyber terminal and press E to start its mission.</p></article><article><b>03 / LEARN</b><p>Choose the safest answer. Correct answers earn points and unlock progress.</p></article><article><b>04 / COMPLETE</b><p>Finish all five missions to secure the network and win the game.</p></article></div><button class="primary-btn" id="guide-start">GOT IT — PLAY <span>↗</span></button></section>
+      <section id="game-screen" class="screen game-screen hidden">
+        <div class="game-toolbar"><div><p class="eyebrow">CYBER CITY / TRAINING ZONE</p><h2>Secure the Network</h2></div><div class="hud"><div><small>SCORE</small><b id="score">000</b></div><div><small>MISSIONS</small><b id="mission-count">0 / 5</b></div><button id="sound-btn" class="sound-btn" aria-label="Toggle sound">♫ SOUND ON</button></div></div>
+        <div class="game-wrap"><div id="game-container"></div><div class="game-tip"><span class="keycap">A</span><span class="keycap">D</span> MOVE <span class="tip-divider">|</span><span class="keycap">SPACE</span> JUMP <span class="tip-divider">|</span><span class="keycap">E</span> INTERACT</div><div id="mission-prompt" class="mission-prompt hidden">PRESS <b>E</b> TO INTERACT</div></div>
+        <div class="mission-strip" id="mission-strip"></div>
+      </section>
+      <section id="win-screen" class="screen end-screen hidden"><div class="win-icon">✓</div><p class="eyebrow">NETWORK SECURED</p><h2>You're a <span>Cyber Guardian!</span></h2><p class="lead">You completed every mission and learned how to stay safer online.</p><div class="final-score">FINAL SCORE <strong id="final-score">500</strong></div><button class="primary-btn" id="play-again">PLAY AGAIN ↻</button></section>
+    </main>
+    <footer><span>SAFE INTERNET • CYBER GUARDIAN</span><span>LEARN SMART. STAY SAFE.</span></footer>
+  </div>
+  <div id="mission-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="question-title"><div class="modal-card"><button id="close-modal" class="modal-close" aria-label="Close">×</button><p class="eyebrow" id="modal-kicker">MISSION 01</p><h2 id="question-title">Choose the safest action</h2><p id="question-text"></p><div id="answer-list" class="answer-list"></div><p id="feedback" class="feedback" aria-live="polite"></p><button id="continue-btn" class="primary-btn hidden">CONTINUE <span>→</span></button></div></div>
+  <script src="lib/phaser.min.js"></script><script src="js/questions.js"></script><script src="js/scenes/BootScene.js"></script><script src="js/scenes/MenuScene.js"></script><script src="js/scenes/GameScene.js"></script><script src="js/scenes/WinScene.js"></script><script src="js/main.js"></script>
+</body></html>
